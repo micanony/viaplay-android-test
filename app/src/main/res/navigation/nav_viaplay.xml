@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_viaplay"
+    app:startDestination="@id/section_list_fragment">
+
+    <fragment
+        android:id="@+id/section_list_fragment"
+        android:name="se.micanonym.viaplaysample.ui.fragments.SectionPageListFragment"
+        tools:layout="@layout/fragment_section_page_list">
+        <action
+            android:id="@+id/action_section_list_fragment_to_section_detail_fragment"
+            app:destination="@id/section_detail_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/section_detail_fragment"
+        android:name="se.micanonym.viaplaysample.ui.fragments.SectionDetailFragment"
+        tools:layout="@layout/fragment_section_detail">
+        <argument
+            android:name="sectionId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+</navigation>
